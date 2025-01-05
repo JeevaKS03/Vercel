@@ -7,6 +7,4 @@ app.get('/about', (req, res) => {
 });
 
 // Export the app as a handler for Vercel
-module.exports = (req, res) => {
-  app(req, res);
-};
+module.exports = app;
