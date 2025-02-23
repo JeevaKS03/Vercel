@@ -1,10 +1,10 @@
 // app/page.js
 export default async function Home() {
     // Initialize the database (run this only once)
-    await fetch('http://localhost:3000/api/init', { cache: 'no-store' });
+    await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/init`, { cache: 'no-store' });
   
     // Fetch posts
-    const res = await fetch('http://localhost:3000/api/posts', { cache: 'no-store' });
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts`, { cache: 'no-store' });
     const posts = await res.json();
     console.log(posts); 
   
