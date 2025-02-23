@@ -2,7 +2,7 @@
 import { MongoClient } from 'mongodb';
 
 //const uri = 'mongodb://localhost:27017'; // Add your MongoDB connection string to .env
-const uri='mongodb+srv://jeevaks:jeevaks@cluster0.ydamq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+const uri = process.env.MONGODB_URI; 
 export async function GET() {
   try {
     const client = new MongoClient(uri);
