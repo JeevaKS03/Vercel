@@ -1,7 +1,7 @@
 import styles from './about.module.css'
 async function about(){
 
-    const response=await fetch('http://localhost:3000/api/hello', { cache: 'no-store' });
+    const response=await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/hello`, { cache: 'no-store' });
     const data =await response.json();
 
     return(
